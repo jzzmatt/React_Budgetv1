@@ -1,0 +1,118 @@
+@mixin  income_display {
+  display: flex;
+  flex-flow: column; 
+  width: 100%;
+}
+
+@mixin income_title {
+  text-transform: uppercase;
+  width: 100%;
+  text-align: left;
+}
+
+.control {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+& > * {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  margin: 0 15px;
+}
+
+.income {
+  @include income_display();
+  
+  &__title {
+    @include income_title();
+  } 
+
+  &__list {
+    width: 100%;
+  }
+  //Normal Flow
+
+  & .income__list__item-delete {
+    display: none;
+  }
+
+  & .income__list__item-value {
+    transition: transform 0.3s;
+  }
+
+  & .income__list__item:hover {
+    & .income__list__item-delete {
+display: block;
+    }
+    & .income__list__item-value {
+transform: translateX(-20px);
+    }
+
+  }
+
+
+}
+
+.expense {
+  @include income_display();
+  
+  &__title {
+    @include income_title();
+  } 
+
+  &__list {
+    width: 100%;
+    
+  }
+
+  // NORMAL FLOW
+
+  & .income__list__item-percentage {
+    font-size: 10px;
+    background-color: #FFDAD9;
+    padding: 3px;
+    border-radius: 3px;
+    width: 32px;
+    text-align: center;
+    color: red;
+}
+
+& .income__list__item-delete {
+  display: none;
+}
+
+// ON TRANSITION
+
+  & .income__list__item-value {
+    transition: transform 0.3s;
+  }
+
+  & .income__list__item-percentage {
+    transition: transform 0.3s;
+  }
+
+  //ON HOVER 
+
+  & .income__list__item:hover {
+    & .income__list__item-delete {
+display: block;
+    }
+    & .income__list__item-value {
+transform: translateX(-20px);
+    }
+    & .income__list__item-percentage {
+      transform: translateX(-20px);
+    }
+
+  }
+
+
+
+}
+  
+}

@@ -1,0 +1,12 @@
+.App {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  height: 100%;
+
+  & > * {
+   margin-bottom: 40px;
+  }
+}
+
+
+

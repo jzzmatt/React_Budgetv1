@@ -1,0 +1,90 @@
+@mixin inside_input {
+  padding: 10px 10px;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #e7e7e7;
+}
+
+$greencolor: #28B9B5;
+$redcolor: #FF5049;
+
+.add {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  background-color: #F7F7F7;
+  padding: 10px 0;
+
+
+   & > * {
+     margin: 0 15px;
+     border-radius: 5px;
+     &:first-child {
+       border: 1px solid #e7e7e7;
+     }
+   }
+
+&__type {
+  padding: 10px;
+
+  &.red:focus {
+    outline: 2px solid $redcolor;
+  }
+
+  &.green:focus {
+    outline: 2px solid $greencolor;
+  }
+}
+
+&__description {
+  width: 40%;
+   & input {
+     @include inside_input();     
+    }
+
+    & input.red:focus {
+      outline: 2px solid $redcolor;
+      }
+
+    & input.green:focus {
+        outline: 2px solid $greencolor;
+        }
+
+}
+
+&__value {
+  width: 10%;
+   & input {@include inside_input()};
+
+   & input.red:focus {
+    outline: 2px solid $redcolor;
+    }
+
+    & input.green:focus {
+      outline: 2px solid $greencolor;
+      }
+}
+
+&__button {
+  border: none;
+  background: none;
+  padding: 10px;
+  & i {
+    font-size: 30px;
+  }
+
+  & .red {
+    color: $redcolor
+  }
+
+  & .green {
+    color: $greencolor
+  }
+
+
+}
+
+}
+

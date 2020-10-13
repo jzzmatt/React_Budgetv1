@@ -1,0 +1,81 @@
+@mixin value_display {
+  //flex-grow: 1;
+  text-align: right;
+  color: #fff;
+}
+$space_bottom: 10px;
+
+@mixin title_display {
+  display: flex;
+   justify-content: space-between;
+   flex-flow: wrap;
+   align-items: center;
+   width: 60%;
+   margin: 0 auto;
+   text-transform: uppercase;
+}
+
+.budget {
+  display: flex;
+  flex-flow: column;
+  max-width: 40vw;
+  margin: 0 auto;
+  
+  & > * {
+   padding: 8px;
+  }
+
+  &__date {
+    margin-bottom: $space_bottom;
+  }
+
+  &__value {
+    margin-bottom: $space_bottom;
+    font-size: 46px;
+  }
+
+  &__income {
+    display: flex;
+    //flex-flow: wrap;
+    @include title_display();
+    margin-bottom: $space_bottom;
+    background-color: #2FB9B5;
+
+    /*& > * {
+      width: 100%;
+      
+    }*/
+   
+
+   &-text {
+     padding-left: 20px;
+   }
+
+   &-value {
+    @include value_display()
+   }
+  }
+
+  &__expense {
+    @include title_display();
+    background-color: #F9504A;
+ 
+    &-text {
+      padding-left: 20px;
+    }
+ 
+    &-value {
+      @include value_display()
+    }
+
+    &-percentage {
+      background-color: rgba(255, 255, 255, 0.2);
+      text-align: center;
+      border-radius: 3px;
+      color: white;
+      font-size: 12px;
+    }
+   }
+
+
+}

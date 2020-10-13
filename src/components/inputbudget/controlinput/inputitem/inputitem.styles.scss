@@ -1,0 +1,42 @@
+.income__list__item {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #3c3c3c3c;
+  padding: 10px;
+  color: #3c3c3c;
+
+
+  &-delete {
+     justify-self: flex-end;
+
+
+    &-button {
+      font-size: 22px;
+      cursor: pointer;
+      line-height: 1;
+      background: none;
+      border: none;
+      vertical-align: middle;     
+
+
+
+      &:active {
+       transform: translateY(2px);
+      }
+      &:focus {
+        outline: none;
+      }
+
+    }
+
+    &-button.income {
+    color: #28B9B5;
+    }
+
+    &-button.expense {
+      color: #FF5049;   
+      }
+
+  }
+
+}
