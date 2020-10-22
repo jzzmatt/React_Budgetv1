@@ -3,6 +3,7 @@ export const totalActionTypes = {
   TOTAL_EXPENSE: "TOTAL_EXPENSE",
   TOTAL_BUDGET: "TOTAL_BUDGET",
   TOTAL_PERCENTAGE: "TOTAL_PERCENTAGE",
+  DELETE_TOTAL: "DELETE_TOTAL"
 };
 
 export default totalActionTypes;

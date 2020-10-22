@@ -10,4 +10,7 @@ export const expItem = (item) => ({
   payload: item
 });
 
-
+export const deleteItem = (item) => ({
+  type: incomesActionTypes.DELETE_ITEM,
+  payload: item
+});

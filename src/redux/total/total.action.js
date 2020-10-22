@@ -16,4 +16,9 @@ export const totalBudget = () => ({
 
 export const totalPercentage = () => ({
   type: totalActionTypes.TOTAL_PERCENTAGE
-})
+});
+
+export const deleteTotal = (item, percentage) => ({
+  type: totalActionTypes.DELETE_TOTAL,
+  payload: { item, percentage }
+});
